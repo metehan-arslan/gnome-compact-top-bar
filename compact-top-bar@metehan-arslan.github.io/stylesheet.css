@@ -1,0 +1,102 @@
+#panel, #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen  {
+  background-color: #000;
+  font-weight: normal;
+  height: 28px;
+  color: #dadada;
+  font-feature-settings: "tnum";
+  transition-duration: 250ms;
+  font-size: 9.75pt;
+  font-weight: 400;
+  transition: all;
+  box-shadow: none;
+  transition-duration: 250ms;
+}
+
+#panel .panel-corner, #panel:overview .panel-corner,
+#panel.unlock-screen .panel-corner,
+#panel.login-screen .panel-corner,
+#panel.lock-screen .panel-corner {
+  -panel-corner-radius: 10px;
+  -panel-corner-background-color: #000;
+  -panel-corner-border-width: 2px;
+  -panel-corner-border-color: transparent;
+  -panel-corner-opacity: 1;
+  transition: all;
+  transition-duration: 250ms;
+}
+
+#panel .panel-button, #panel:overview.panel-button, #panel.unlock-screen.panel-button, #panel.login-screen.panel-button, #panel.lock-screen.panel-button {
+  -natural-hpadding: 7px;
+  -minimum-hpadding: 7px;
+  font-weight: normal;
+  color: gray;
+  border-radius: 10px;
+  transition: all;
+  transition-duration: 100ms;
+  margin-bottom: 1px;
+  margin-right:1px;
+}
+
+#panel .panel-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#panel .panel-button.clock-display {
+  margin:0 0 0 0;
+  margin-bottom:1px;
+}
+
+.aggregateMenu .panel-button{
+  margin-right:0px!important;
+  text-align: right;
+}
+
+#panel.transparent-top-bar--solid {
+    transition-duration: 300ms;
+}
+#panel.transparent-top-bar--solid .panel-corner {
+    -panel-corner-border-width: 0px;
+    transition-duration: 300ms;
+}
+
+#panel.transparent-top-bar--transparent {
+    background-color: rgba(0, 0, 0, 0.35);
+    transition-duration: 500ms;
+}
+#panel.transparent-top-bar--transparent:overview {
+    background-color: transparent;
+    transition-duration: 250ms;
+}
+#panel.transparent-top-bar--transparent .panel-corner {
+    -panel-corner-border-width: 0px;
+    -panel-corner-opacity: 0.35;
+    transition-duration: 500ms;
+}
+#panel.transparent-top-bar--transparent:overview .panel-corner {
+    -panel-corner-opacity: 0;
+    transition-duration: 250ms;
+}
+#panel.transparent-top-bar--transparent .panel-button {
+    color: #eee;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+}
+#panel.transparent-top-bar--transparent .system-status-icon,
+#panel.transparent-top-bar--transparent .app-menu-icon > StIcon,
+#panel.transparent-top-bar--transparent .popup-menu-arrow {
+    icon-shadow: 0px 1px 2px rgba(0, 0, 0, 0.9);
+}
+#panel.transparent-top-bar--transparent:hover {
+    text-shadow: 0px 1px 6px rgba(0, 0, 0, 1);
+}
+#panel.transparent-top-bar--transparent:hover .system-status-icon,
+#panel.transparent-top-bar--transparent:hover .app-menu-icon > StIcon,
+#panel.transparent-top-bar--transparent:hover .popup-menu-arrow {
+    icon-shadow: 0px 1px 6px rgba(0, 0, 0, 1);
+}
+#panel.transparent-top-bar--transparent:active .system-status-icon,
+#panel.transparent-top-bar--transparent:overview .system-status-icon,
+#panel.transparent-top-bar--transparent:focus .system-status-icon,
+#panel.transparent-top-bar--transparent:checked .system-status-icon {
+    icon-shadow: black 0 2px 2px;
+}
