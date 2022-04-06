@@ -24,4 +24,4 @@ transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-exten
 >
 >[Hide Activities](https://github.com/zeten30/HideActivities)
 >
->[Vitalis, system monitor](https://github.com/corecoding/Vitals)
+>[Vitals, system monitor](https://github.com/corecoding/Vitals)
