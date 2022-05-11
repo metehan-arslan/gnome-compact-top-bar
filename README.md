@@ -1,5 +1,5 @@
 # gnome-compact-top-bar
-Compact and transparent top bar for GNOME 40 and 41
+Compact and transparent top bar for GNOME
 
 ## Installation
 1-Copy the folder into
