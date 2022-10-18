@@ -1,7 +1,7 @@
 {
   "description": "Adds transparency effects and slims the top bar for more space.",
   "name": "Compact Top Bar",
-  "shell-version": ["40", "41", "42"],
+  "shell-version": ["40", "41", "42", "43"],
   "url": "https://github.com/metehan-arslan",
   "uuid": "compact-top-bar@metehan-arslan.github.io",
   "version": 1
