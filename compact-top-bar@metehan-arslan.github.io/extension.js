@@ -1,6 +1,8 @@
 const { Meta, St } = imports.gi;
 
 const Main = imports.ui.main;
+const MessageTray = imports.ui.messageTray;
+const orig = MessageTray.Notification.prototype.createBanner;
 
 class Extension {
     constructor() {
@@ -9,6 +11,7 @@ class Extension {
     }
 
     enable() {
+
         this._actorSignalIds = new Map();
         this._windowSignalIds = new Map();
 
@@ -34,10 +37,13 @@ class Extension {
             global.window_manager.connect('switch-workspace', this._updateTransparent.bind(this))
         ]);
 
+        MessageTray.Notification.prototype.createBanner = style;
+
         this._updateTransparent();
     }
 
     disable() {
+        MessageTray.Notification.prototype.createBanner = orig;
         for (const actorSignalIds of [this._actorSignalIds, this._windowSignalIds]) {
             for (const [actor, signalIds] of actorSignalIds) {
                 for (const signalId of signalIds) {
@@ -106,10 +112,17 @@ class Extension {
         } else {
             Main.panel.add_style_class_name('transparent-top-bar--solid');
             Main.panel.remove_style_class_name('transparent-top-bar--transparent');
+
         }
     }
 };
 
 function init() {
     return new Extension();
+}
+
+function style() {
+  banner = this.source.createBanner(this);
+  banner.actor.add_style_class_name('notification-transparency');
+  return banner;
 }
