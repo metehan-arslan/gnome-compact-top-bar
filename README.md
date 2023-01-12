@@ -11,11 +11,13 @@ Compact and transparent top bar for GNOME
 ## Screenshots
 
 Transparent on desktop:
-![desktop](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/src/screenshots/Screenshot%20from%202022-01-26%2001-03-34.png)
+![desktop](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/src/screenshots/Screenshot%20from%202023-01-12%2021-51-29.png)
 
 Blacked out, fonts fading on fullscreen:
-![fullscreen](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/src/screenshots/Screenshot%20from%202022-01-26%2001-03-45.png)
+![fullscreen](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/src/screenshots/Screenshot%20from%202023-01-12%2021-51-38.png)
 
+New: Transparent Notifications!
+![notification tray](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/src/screenshots/Screenshot%20from%202023-01-12%2021-52-10.png)
 
 transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-extension-transparent-top-bar) big thanks to him
 
