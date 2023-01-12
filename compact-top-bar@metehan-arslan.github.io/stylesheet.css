@@ -1,13 +1,12 @@
 
 #panel, #panel:overview, #panel.unlock-screen, #panel.login-screen, #panel.lock-screen {
   background-color: #000;
-  font-weight: normal;
-  height: 29px;
+  font-weight: 500;
+  height: 25px;
   color: #dadada;
   font-feature-settings: "tnum", "zero";
   transition-duration: 250ms;
   font-size: 10pt;
-  font-weight: 400;
   transition: all;
   box-shadow: none;
   transition-duration: 250ms;
@@ -31,11 +30,10 @@
 #panel .panel-button, #panel:overview.panel-button, #panel.unlock-screen.panel-button, #panel.login-screen.panel-button, #panel.lock-screen.panel-button {
   -natural-hpadding: 7px;
   -minimum-hpadding: 7px;
-  font-weight: normal;
+  font-weight: 500;
   color: gray;
   transition: all;
   transition-duration: 100ms;
-  blur-radius: none;
 }
 
 
@@ -45,7 +43,6 @@
   font-weight: normal;
   font-feature-settings: "tnum", "zero";
   font-size: 11pt;
-  font-weight: 400;
   transition: all;
   box-shadow: none;
 }
