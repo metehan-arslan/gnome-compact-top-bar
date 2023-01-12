@@ -4,7 +4,7 @@ Compact and transparent top bar for GNOME
 ## Installation
 1-Copy the folder into
 <pre>
-/.local/share/gnome-shell/extensions
+~/.local/share/gnome-shell/extensions
 </pre>
 2- Log out and log in. You will see Compact Top Bar Extension in your GNOME Extensions tool.
 
@@ -25,3 +25,5 @@ transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-exten
 >[Hide Activities](https://github.com/zeten30/HideActivities)
 >
 >[Vitals, system monitor](https://github.com/corecoding/Vitals)
+>
+>>[AppIndicator, system monitor](https://github.com/ubuntu/gnome-shell-extension-appindicator)
