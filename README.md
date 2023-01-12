@@ -26,4 +26,4 @@ transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-exten
 >
 >[Vitals, system monitor](https://github.com/corecoding/Vitals)
 >
->>[AppIndicator, system monitor](https://github.com/ubuntu/gnome-shell-extension-appindicator)
+>[AppIndicator, system monitor](https://github.com/ubuntu/gnome-shell-extension-appindicator)
