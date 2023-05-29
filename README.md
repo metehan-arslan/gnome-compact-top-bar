@@ -10,6 +10,12 @@ Compact and transparent top bar for GNOME
 </pre>
 2- Log out and log in. You will see Compact Top Bar Extension in your GNOME Extensions tool.
 
+## Install on Arch Linux
+
+```sh
+git clone https://aur.archlinux.org/gnome-shell-extension-compact-top-bar && cd gnome-shell-extension-compact-top-bar && makepkg -sfri
+```
+
 ## Screenshots
 
 Transparent on desktop:  
