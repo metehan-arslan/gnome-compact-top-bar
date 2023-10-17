@@ -1,5 +1,5 @@
 # gnome-compact-top-bar
-Compact and transparent top bar for GNOME
+Compact and transparent top bar ONLY FOR GNOME 45!
 
 ### [Get It On GNOME Extensions!](https://extensions.gnome.org/extension/5669/compact-top-bar/)
 
