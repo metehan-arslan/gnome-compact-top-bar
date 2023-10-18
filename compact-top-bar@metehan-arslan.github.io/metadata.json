@@ -2,13 +2,9 @@
   "description": "Adds transparency effects (including notification tray) and slims the top bar for more space. See github page for more screenshots.",
   "name": "Compact Top Bar",
   "shell-version": [
-    "40",
-    "41",
-    "42",
-    "43",
-    "44"
+    "45"
   ],
   "url": "https://github.com/metehan-arslan/gnome-compact-top-bar",
   "uuid": "gnome-compact-top-bar@metehan-arslan.github.io",
-  "version": 3
+  "version": 4
 }

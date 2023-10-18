@@ -1,10 +1,17 @@
-const { Meta, St } = imports.gi;
+//const { Meta, St } = imports.gi; // Before GNOME 45
+import Meta from 'gi://Meta';
+import St from 'gi://St';
 
-const Main = imports.ui.main;
-const MessageTray = imports.ui.messageTray;
+// const Main = imports.ui.main; // Before GNOME 45
+import * as Main from 'resource:///org/gnome/shell/ui/main.js'
+
+// const MessageTray = imports.ui.messageTray; // Before GNOME 45
+import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js'
+
 const orig = MessageTray.Notification.prototype.createBanner;
 
-class Extension {
+// class Extension { // Before GNOME 45
+export default class Extension {
     constructor() {
         this._actorSignalIds = null;
         this._windowSignalIds = null;
