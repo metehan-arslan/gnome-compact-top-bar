@@ -6,9 +6,9 @@ import St from 'gi://St';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js'
 
 // const MessageTray = imports.ui.messageTray; // Before GNOME 45
-import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js'
+//  import * as MessageTray from 'resource:///org/gnome/shell/ui/messageTray.js' // Transparent Notifications doesn't work properly, so disabled until further development.
 
-const orig = MessageTray.Notification.prototype.createBanner;
+// const orig = MessageTray.Notification.prototype.createBanner;
 
 // class Extension { // Before GNOME 45
 export default class Extension {
@@ -44,13 +44,13 @@ export default class Extension {
             global.window_manager.connect('switch-workspace', this._updateTransparent.bind(this))
         ]);
 
-        MessageTray.Notification.prototype.createBanner = style;
+        // MessageTray.Notification.prototype.createBanner = style;
 
         this._updateTransparent();
     }
 
     disable() {
-        MessageTray.Notification.prototype.createBanner = orig;
+        // MessageTray.Notification.prototype.createBanner = orig;
         for (const actorSignalIds of [this._actorSignalIds, this._windowSignalIds]) {
             for (const [actor, signalIds] of actorSignalIds) {
                 for (const signalId of signalIds) {
@@ -128,8 +128,8 @@ function init() {
     return new Extension();
 }
 
-function style() {
-  banner = this.source.createBanner(this);
-  banner.actor.add_style_class_name('notification-transparency');
-  return banner;
-}
+//  function style() {
+//      banner = this.source.createBanner(this);
+//      banner.actor.add_style_class_name('notification-transparency');
+//      return banner;
+//  }
