@@ -38,6 +38,7 @@
 
 
 /*Notification Tray*/
+/*
 .notification-transparency {
   background-color: rgba(0, 0, 0, 0.25);
   font-weight: normal;
@@ -46,7 +47,7 @@
   transition: all;
   box-shadow: none;
 }
-
+*/
 #panel.transparent-top-bar--solid {
     transition-duration: 300ms;
 }
