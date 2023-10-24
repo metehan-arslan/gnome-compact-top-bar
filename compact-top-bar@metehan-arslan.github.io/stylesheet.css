@@ -12,20 +12,6 @@
   transition-duration: 250ms;
 }
 
-/* for older GNOME versions that have rounded top corners */
-#panel .panel-corner, #panel:overview .panel-corner,
-#panel.unlock-screen .panel-corner,
-#panel.login-screen .panel-corner,
-#panel.lock-screen .panel-corner {
-  -panel-corner-radius: 10px;
-  -panel-corner-background-color: #000;
-  -panel-corner-border-width: 2px;
-  -panel-corner-border-color: transparent;
-  -panel-corner-opacity: 1;
-  transition: all;
-  transition-duration: 250ms;
-}
-
 /*Buttons*/
 #panel .panel-button, #panel:overview.panel-button, #panel.unlock-screen.panel-button, #panel.login-screen.panel-button, #panel.lock-screen.panel-button {
   -natural-hpadding: 7px;
