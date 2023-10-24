@@ -36,18 +36,6 @@
   transition-duration: 100ms;
 }
 
-
-/*Notification Tray*/
-/*
-.notification-transparency {
-  background-color: rgba(0, 0, 0, 0.25);
-  font-weight: normal;
-  font-feature-settings: "tnum";
-  font-size: 11pt;
-  transition: all;
-  box-shadow: none;
-}
-*/
 #panel.transparent-top-bar--solid {
     transition-duration: 300ms;
 }
