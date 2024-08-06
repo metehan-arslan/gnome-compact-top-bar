@@ -83,11 +83,13 @@ export default class CompactTopBar extends Extension {
             return metaWindow.is_on_primary_monitor()
                     && metaWindow.showing_on_its_workspace()
                     && !metaWindow.is_hidden()
+                    && !metaWindow.is_fullscreen()
                     && metaWindow.get_window_type() !== Meta.WindowType.DESKTOP;
         } else {
             return !metaWindow.is_on_primary_monitor()
                     && metaWindow.showing_on_its_workspace()
                     && !metaWindow.is_hidden()
+                    && !metaWindow.is_fullscreen()
                     && metaWindow.get_window_type() !== Meta.WindowType.DESKTOP;
         }
             
