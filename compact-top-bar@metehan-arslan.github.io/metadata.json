@@ -4,5 +4,8 @@
   "shell-version": ["46","47"],
   "url": "https://github.com/metehan-arslan/gnome-compact-top-bar",
   "uuid": "gnome-compact-top-bar@metehan-arslan.github.io",
-  "version": 6
+  "version": 7,
+  "settings-schema": "org.gnome.shell.extensions.compact-top-bar",
+  "settings-schema-path": "schemas/",
+  "preferences": "prefs.js"
 }

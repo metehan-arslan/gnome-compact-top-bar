@@ -1,11 +1,13 @@
 import Meta from 'gi://Meta';
 import St from 'gi://St';
-import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
-import * as Main from 'resource:///org/gnome/shell/ui/main.js'
+import { Extension } from 'resource:///org/gnome/shell/extensions/extension.js';
+import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
 export default class CompactTopBar extends Extension {
-
     enable() {
+        this._settings = this.getSettings();
+        this._settingsChangedId = this._settings.connect('changed::fade-text-on-fullscreen', this._updateStyles.bind(this));
+
 
         this._actorSignalIds = new Map();
         this._windowSignalIds = new Map();
@@ -33,9 +35,15 @@ export default class CompactTopBar extends Extension {
         ]);
 
         this._updateTransparent();
+        this._updateStyles();
     }
 
     disable() {
+        if (this._settingsChangedId) {
+            this._settings.disconnect(this._settingsChangedId);
+            this._settingsChangedId = null;
+        }
+
         for (const actorSignalIds of [this._actorSignalIds, this._windowSignalIds]) {
             for (const [actor, signalIds] of actorSignalIds) {
                 for (const signalId of signalIds) {
@@ -48,6 +56,7 @@ export default class CompactTopBar extends Extension {
 
         Main.panel.remove_style_class_name('transparent-top-bar--solid');
         Main.panel.remove_style_class_name('transparent-top-bar--transparent');
+        Main.panel.remove_style_class_name('transparent-top-bar--fade-text');
     }
 
     _onWindowActorAdded(container, metaWindowActor) {
@@ -63,6 +72,15 @@ export default class CompactTopBar extends Extension {
         }
         this._windowSignalIds.delete(metaWindowActor);
         this._updateTransparent();
+    }
+
+    _updateStyles() {
+        const fadeTextOnFullscreen = this._settings.get_boolean('fade-text-on-fullscreen');
+        if (fadeTextOnFullscreen) {
+            Main.panel.add_style_class_name('transparent-top-bar--fade-text');
+        } else {
+            Main.panel.remove_style_class_name('transparent-top-bar--fade-text');
+        }
     }
 
     _updateTransparent() {
@@ -118,7 +136,3 @@ export default class CompactTopBar extends Extension {
         }
     }
 };
-
-function init() {
-    return new Extension();
-}
