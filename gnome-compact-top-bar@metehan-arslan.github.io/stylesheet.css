@@ -30,7 +30,7 @@
 }
 
 #panel.transparent-top-bar--fade-text .panel-button {
-    color: rgba(238, 238, 238,0.5);
+    color: #babababa;
     transition: color 0.3s ease;
 }
 
