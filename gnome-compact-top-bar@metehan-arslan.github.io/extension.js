@@ -40,7 +40,6 @@ export default class CompactTopBar extends Extension {
 
     disable() {
         if (this._settingsChangedId) {
-            this._settings = null;
             this._settings.disconnect(this._settingsChangedId);
             this._settingsChangedId = null;
         }
@@ -52,6 +51,7 @@ export default class CompactTopBar extends Extension {
                 }
             }
         }
+        this._settings = null;
         this._actorSignalIds = null;
         this._windowSignalIds = null;
 
