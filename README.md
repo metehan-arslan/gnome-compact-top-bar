@@ -21,13 +21,13 @@ git clone https://aur.archlinux.org/gnome-shell-extension-compact-top-bar && cd 
 ## Screenshots
 
 Transparent on desktop:  
-![desktop](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/desktop.png)
+![desktop](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/desktop.png?raw=true)
 
 Blacked out, fonts fading on fullscreen:  
-![fullscreen](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/fullscreen.png)
+![fullscreen](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/fullscreen.png?raw=true)
 
 ~~New: Transparent Notifications!~~  
-![notification tray](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/tray.png)
+![notification tray](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/tray.png?raw=true)
 
 transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-extension-transparent-top-bar)
 
