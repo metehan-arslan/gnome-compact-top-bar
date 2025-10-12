@@ -21,15 +21,15 @@ git clone https://aur.archlinux.org/gnome-shell-extension-compact-top-bar && cd 
 ## Screenshots
 
 Transparent on desktop:  
-![desktop](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/Screenshot%20from%202023-01-12%2022-17-55.png)
+![desktop](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/desktop.png)
 
 Blacked out, fonts fading on fullscreen:  
-![fullscreen](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/Screenshot%20from%202023-01-12%2022-17-59.png)
+![fullscreen](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/fullscreen.png)
 
-New: Transparent Notifications!  
-![notification tray](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/Screenshot%20from%202023-01-12%2022-18-10.png)
+~~New: Transparent Notifications!~~  
+![notification tray](https://raw.githubusercontent.com/metehan-arslan/gnome-compact-top-bar/main/screnshots/tray.png)
 
-transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-extension-transparent-top-bar) big thanks to him
+transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-extension-transparent-top-bar)
 
 ### Extensions I Also Use:  
 >[Just Perfection](https://gitlab.gnome.org/jrahmatzadeh/just-perfection)
