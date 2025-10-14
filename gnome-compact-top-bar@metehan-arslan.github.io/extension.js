@@ -97,21 +97,13 @@ export default class CompactTopBar extends Extension {
         // Get all the windows in the active workspace that are visible.
         const workspaceManager = global.workspace_manager;
         const activeWorkspace = workspaceManager.get_active_workspace();
+        const topBarMonitor = Main.layoutManager.findMonitorForActor(Main.panel).index;
         const windows = activeWorkspace.list_windows().filter(metaWindow => {
-        if (!Main.layoutManager.primaryMonitor.inFullscreen){
-            return metaWindow.is_on_primary_monitor()
-                    && metaWindow.showing_on_its_workspace()
-                    && !metaWindow.is_hidden()
-                    && !metaWindow.is_fullscreen()
-                    && metaWindow.get_window_type() !== Meta.WindowType.DESKTOP;
-        } else {
-            return !metaWindow.is_on_primary_monitor()
-                    && metaWindow.showing_on_its_workspace()
-                    && !metaWindow.is_hidden()
-                    && !metaWindow.is_fullscreen()
-                    && metaWindow.get_window_type() !== Meta.WindowType.DESKTOP;
-        }
-            
+            return metaWindow.get_monitor() === topBarMonitor
+                && metaWindow.showing_on_its_workspace()
+                && !metaWindow.is_hidden()
+                && !metaWindow.is_fullscreen()
+                && metaWindow.get_window_type() !== Meta.WindowType.DESKTOP;
         });
 
         // Check if at least one window is near enough to the panel.
