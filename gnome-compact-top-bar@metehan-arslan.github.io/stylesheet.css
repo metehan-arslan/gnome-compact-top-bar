@@ -16,6 +16,7 @@
 #panel .panel-button, #panel:overview.panel-button, #panel.unlock-screen.panel-button, #panel.login-screen.panel-button, #panel.lock-screen.panel-button {
   -natural-hpadding: 7px;
   -minimum-hpadding: 7px;
+  color:#bababa;
   font-weight: 500;
   transition: all;
   transition-duration: 100ms;
