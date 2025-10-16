@@ -24,20 +24,26 @@
 #panel.transparent-top-bar--solid {
     transition-duration: 300ms;
 }
-#panel.transparent-top-bar--solid .panel-corner {
-    -panel-corner-border-width: 0px;
-    transition-duration: 300ms;
-}
 
 #panel.transparent-top-bar--fade-text .panel-button {
     color: #bababa;
     transition: color 0.3s ease;
 }
 
-#panel.transparent-top-bar--fade-text:hover .panel-button {
+
+#panel.transparent-top-bar--fade-text .workspace-dot {
+    background-color: #bababa;
+    transition: color 0.3s ease;
+}
+
+
+#panel.transparent-top-bar--fade-text:hover .panel-button  {
     color: #eee;
 }
 
+#panel.transparent-top-bar--fade-text:hover .workspace-dot  {
+    background-color: #eee;
+}
 #panel.transparent-top-bar--transparent {
     background-color: rgba(0, 0, 0, 0.25);
     transition-duration: 500ms;
@@ -46,19 +52,17 @@
     background-color: transparent;
     transition-duration: 250ms;
 }
-#panel.transparent-top-bar--transparent .panel-corner {
-    -panel-corner-border-width: 0px;
-    -panel-corner-opacity: 0.25;
-    transition-duration: 500ms;
-}
-#panel.transparent-top-bar--transparent:overview .panel-corner {
-    -panel-corner-opacity: 0;
-    transition-duration: 250ms;
-}
+
 #panel.transparent-top-bar--transparent .panel-button {
     color: #eee;
     text-shadow: none;
 }
+
+#panel.transparent-top-bar--transparent .workspace-dot {
+    background-color: #eee;
+    text-shadow: none;
+}
+
 #panel.transparent-top-bar--transparent .system-status-icon,
 #panel.transparent-top-bar--transparent .app-menu-icon > StIcon,
 #panel.transparent-top-bar--transparent .popup-menu-arrow {
@@ -78,4 +82,5 @@
 #panel.transparent-top-bar--transparent:checked .system-status-icon {
     icon-shadow: none;
 }
+
 
