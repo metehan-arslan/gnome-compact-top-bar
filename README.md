@@ -26,7 +26,11 @@ Transparent on desktop:
 Blacked out, fonts fading on fullscreen:  
 ![fullscreen](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/fullscreen.png?raw=true)
 
+New: Transparent OSD!  
+![osd](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/osd.png?raw=true)
+
 ~~New: Transparent Notifications!~~  
+`notification-transparency` functionality has been deprecated by GNOME, this doesn't work anymore.  
 ![notification tray](https://github.com/metehan-arslan/gnome-compact-top-bar/blob/main/screenshots/tray.png?raw=true)
 
 transparency forked from [zhangai](https://github.com/zhanghai/gnome-shell-extension-transparent-top-bar)
