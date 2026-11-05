@@ -1,16 +1,17 @@
 {
-  "description": "Adds transparency effects (including notification tray) and slims the top bar for more space. See github page for more screenshots.",
+  "description": "Makes the top bar compact and adapts its transparency to visible windows; also styles the on-screen display.",
   "name": "Compact Top Bar",
   "shell-version": [
     "46",
     "47",
     "48",
     "49",
-    "50"
+    "50",
+    "51"
   ],
-  "url": "https://github.com/metehan-arslan/gnome-compact-top-bar",
+  "url": "https://github.com/psam21/gnome-compact-top-bar",
   "uuid": "gnome-compact-top-bar@metehan-arslan.github.io",
-  "version": 12,
+  "version": 19,
   "settings-schema": "org.gnome.shell.extensions.compact-top-bar",
   "settings-schema-path": "schemas/",
   "preferences": "prefs.js"

@@ -16,7 +16,7 @@ export default class CompactTopBarPreferences extends ExtensionPreferences {
         page.add(group);
 
         // Create a new preferences row
-        const row = new Adw.ActionRow({ title: _('Fade text on fullscreen') });
+        const row = new Adw.ActionRow({ title: _('Dim panel text') });
         group.add(row);
 
         // Create a switch and bind its value to the setting

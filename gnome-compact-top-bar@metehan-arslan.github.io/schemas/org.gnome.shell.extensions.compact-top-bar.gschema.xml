@@ -3,8 +3,8 @@
   <schema id="org.gnome.shell.extensions.compact-top-bar" path="/org/gnome/shell/extensions/compact-top-bar/">
     <key name="fade-text-on-fullscreen" type="b">
       <default>true</default>
-      <summary>Fade text on fullscreen</summary>
-      <description>If enabled, the top bar text will fade when an application is fullscreen</description>
+      <summary>Dim panel text</summary>
+      <description>Use subdued colors for panel buttons and workspace indicators until the panel is hovered</description>
     </key>
   </schema>
 </schemalist>
