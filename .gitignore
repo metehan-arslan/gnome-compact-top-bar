@@ -1,1 +1,3 @@
-gnome-compact-top-bar@metehan-arslan.github.io/gnome-compact-top-bar@metehan-arslan.github.io.shell-extension.zip
+*.shell-extension.zip
+gnome-compact-top-bar@metehan-arslan.github.io/venv/
+gnome-compact-top-bar@metehan-arslan.github.io/schemas/gschemas.compiled

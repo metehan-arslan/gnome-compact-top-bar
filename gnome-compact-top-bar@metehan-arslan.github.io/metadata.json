@@ -6,11 +6,12 @@
     "47",
     "48",
     "49",
-    "50"
+    "50",
+    "51"
   ],
   "url": "https://github.com/metehan-arslan/gnome-compact-top-bar",
   "uuid": "gnome-compact-top-bar@metehan-arslan.github.io",
-  "version": 12,
+  "version": 13,
   "settings-schema": "org.gnome.shell.extensions.compact-top-bar",
   "settings-schema-path": "schemas/",
   "preferences": "prefs.js"

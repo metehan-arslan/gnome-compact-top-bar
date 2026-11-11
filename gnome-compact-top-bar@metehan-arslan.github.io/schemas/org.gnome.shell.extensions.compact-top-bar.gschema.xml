@@ -6,5 +6,39 @@
       <summary>Fade text on fullscreen</summary>
       <description>If enabled, the top bar text will fade when an application is fullscreen</description>
     </key>
+    <key name="text-fade-opacity" type="d">
+      <default>0.73</default>
+      <summary>Text and icons fade opacity</summary>
+      <description>Opacity level for text and icons when faded (0.0 = fully transparent, 1.0 = fully opaque)</description>
+      <range min="0.0" max="1.0"/>
+    </key>
+    <key name="text-fade-color" type="s">
+      <default>'#ffffff'</default>
+      <summary>Text and icons fade color</summary>
+      <description>Color for text and icons when faded</description>
+    </key>
+    <key name="background-fade-opacity" type="d">
+      <default>0.25</default>
+      <summary>Background fade opacity</summary>
+      <description>Opacity level for the top bar background when transparent (0.0 = fully transparent, 1.0 = fully opaque)</description>
+      <range min="0.0" max="1.0"/>
+    </key>
+    <key name="osd-opacity" type="d">
+      <default>0.5</default>
+      <summary>OSD background opacity</summary>
+      <description>Background opacity for the on-screen display (volume, brightness, etc.)</description>
+      <range min="0.0" max="1.0"/>
+    </key>
+    <key name="osd-text-opacity" type="d">
+      <default>0.8</default>
+      <summary>OSD logo and text opacity</summary>
+      <description>Opacity for the OSD icon, logo, and text</description>
+      <range min="0.0" max="1.0"/>
+    </key>
+    <key name="osd-text-color" type="s">
+      <default>'#ffffff'</default>
+      <summary>OSD logo and text color</summary>
+      <description>Color for the OSD icon, logo, and text</description>
+    </key>
   </schema>
 </schemalist>
