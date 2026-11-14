@@ -76,6 +76,43 @@ export default class CompactTopBarPreferences extends ExtensionPreferences {
             subtitle: _('Opacity of the top bar background when transparent'),
         });
 
+        const keepTransparentRow = new Adw.ActionRow({
+            title: _('Stay transparent with windows'),
+            subtitle: _('Keep this opacity when a window touches the top bar, instead of turning solid'),
+        });
+        topBarGroup.add(keepTransparentRow);
+
+        const keepTransparentSwitch = new Gtk.Switch({
+            active: settings.get_boolean('transparent-with-windows'),
+            valign: Gtk.Align.CENTER,
+        });
+        settings.bind(
+            'transparent-with-windows',
+            keepTransparentSwitch,
+            'active',
+            Gio.SettingsBindFlags.DEFAULT
+        );
+        keepTransparentRow.add_suffix(keepTransparentSwitch);
+        keepTransparentRow.activatable_widget = keepTransparentSwitch;
+
+        // --- Group: Top Bar Font ---
+        const fontGroup = new Adw.PreferencesGroup({
+            title: _('Top Bar Font'),
+        });
+        page.add(fontGroup);
+
+        const fontSizeRow = new Adw.SpinRow({
+            title: _('Font size'),
+            subtitle: _('Size of the top bar text, in points'),
+            adjustment: new Gtk.Adjustment({
+                lower: 6,
+                upper: 24,
+                step_increment: 1,
+            }),
+        });
+        settings.bind('font-size', fontSizeRow, 'value', Gio.SettingsBindFlags.DEFAULT);
+        fontGroup.add(fontSizeRow);
+
         // --- Group 3: On-Screen Display (OSD) ---
         const osdGroup = new Adw.PreferencesGroup({
             title: _('On-Screen Display (OSD)'),

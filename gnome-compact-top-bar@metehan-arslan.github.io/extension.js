@@ -16,6 +16,8 @@ export default class CompactTopBar extends Extension {
             this._settings.connect('changed::text-fade-opacity', this._applyStyles.bind(this)),
             this._settings.connect('changed::text-fade-color', this._applyStyles.bind(this)),
             this._settings.connect('changed::background-fade-opacity', this._applyStyles.bind(this)),
+            this._settings.connect('changed::transparent-with-windows', this._updateTransparent.bind(this)),
+            this._settings.connect('changed::font-size', this._applyStyles.bind(this)),
             this._settings.connect('changed::osd-opacity', this._applyOsdStyle.bind(this)),
             this._settings.connect('changed::osd-text-opacity', this._applyOsdStyle.bind(this)),
             this._settings.connect('changed::osd-text-color', this._applyOsdStyle.bind(this)),
@@ -265,15 +267,13 @@ export default class CompactTopBar extends Extension {
             const bgOpacity = this._settings.get_double('background-fade-opacity');
             const textOpacity = this._settings.get_double('text-fade-opacity');
             const colorStr = this._settings.get_string('text-fade-color') || '#ffffff';
+            const fontSize = this._settings.get_int('font-size');
 
-            // 1. Top bar background
-            if (this._isTransparent) {
-                Main.panel.set_style(
-                    `background-color: rgba(0, 0, 0, ${bgOpacity.toFixed(2)}); transition-duration: 500ms;`
-                );
-            } else {
-                Main.panel.set_style(null);
-            }
+            // 1. Top bar background and font size
+            let panelStyle = `font-size: ${fontSize}pt;`;
+            if (this._isTransparent)
+                panelStyle += ` background-color: rgba(0, 0, 0, ${bgOpacity.toFixed(2)}); transition-duration: 500ms;`;
+            Main.panel.set_style(panelStyle);
 
             // 2. Text and icons fading
             const { buttons, dots } = this._getPanelElements();
@@ -311,7 +311,8 @@ export default class CompactTopBar extends Extension {
     }
 
     _updateTransparent() {
-        if (Main.overview.visibleTarget || !Main.sessionMode.hasWindows) {
+        if (Main.overview.visibleTarget || !Main.sessionMode.hasWindows ||
+            this._settings?.get_boolean('transparent-with-windows')) {
             this._setTransparent(true);
             return;
         }
